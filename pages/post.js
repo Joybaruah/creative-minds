@@ -91,7 +91,7 @@ export default function Post() {
             className="bg-gray-800 h-48 w-full text-white rounded-lg p-2 text-sm"
           ></textarea>
           <p
-            className={`text-cyan-400 font-medium text-sm ${
+            className={`text-[#5F9DF7] font-medium text-sm ${
               post.description.length > 300 ? "text-red-600" : ""
             }`}
           >
@@ -100,7 +100,7 @@ export default function Post() {
         </div>
         <button
           type="submit"
-          className="w-full bg-cyan-500 text-white p-2 my-2 rounded-lg text-sm"
+          className="w-full bg-[#5F9DF7] text-white p-2 my-2 rounded-lg text-sm"
         >
           Submit
         </button>

@@ -68,7 +68,7 @@ export default function Details() {
           />
           <button
             onClick={SubmitMessage}
-            className="bg-cyan-400 text-white py-2 px-4 text-sm"
+            className="bg-[#5F9DF7] text-white py-2 px-4 text-sm"
           >
             Submit
           </button>
