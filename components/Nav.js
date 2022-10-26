@@ -25,7 +25,7 @@ export default function Nav() {
               <button className="font-medium bg-[#5F9DF7] text-white py-2 px-4 rounded-md text-sm">Post</button>
             </Link>
             <Link href="/dashboard">
-              <img src={user.photoURL} className="w-12 rounded-full cursor-pointer"/>
+              <img src={user.photoURL} alt="" className="w-12 rounded-full cursor-pointer"/>
             </Link>
           </div>
         )}

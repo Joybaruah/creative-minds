@@ -78,7 +78,7 @@ export default function Details() {
           {allMessages?.map((message) => (
             <div className="bg-white p-4 my-4 border-2">
               <div className="flex items-center gap-2 mb-4">
-                <img src={message.avatar} className="w-10 rounded-full"/>
+                <img src={message.avatar} alt="" className="w-10 rounded-full"/>
                 <h2>{message.username}</h2>
               </div>
               <h2>{message.message}</h2>
