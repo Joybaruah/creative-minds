@@ -45,13 +45,14 @@ export default function Details() {
     const docRef = doc(db, "posts", routeData.id);
     const unsubscribe = onSnapshot(docRef, (snapshot) => {
       setAllMessages(snapshot.data().comments);
-    })
+    });
     return unsubscribe;
   };
 
   useEffect(() => {
     if (!route.isReady) return;
     getComments();
+    console.log(message);
   }, [route.isReady]);
 
   return (
@@ -76,9 +77,13 @@ export default function Details() {
         <div className="py-6">
           <h2 className="font-bold">Comments</h2>
           {allMessages?.map((message) => (
-            <div className="bg-white p-4 my-4 border-2">
+            <div className="bg-white p-4 my-4 border-2" key={message.id}>
               <div className="flex items-center gap-2 mb-4">
-                <img src={message.avatar} alt="" className="w-10 rounded-full"/>
+                <img
+                  src={message.avatar}
+                  alt=""
+                  className="w-10 rounded-full"
+                />
                 <h2>{message.username}</h2>
               </div>
               <h2>{message.message}</h2>
